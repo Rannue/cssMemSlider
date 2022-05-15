@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+
+// // .container-container {
+// //     display: inline-flex;
+// // }
+
+// // .container-container {
+// //     // width: 80em;
+// //     // height: 80em;
+// //     // background-color: rgb(132, 0, 255);
+// //     // display: flex;
+// //     // align-items: center;
+
+// //     .container {
+// //         // display: flex;
+// //         // margin: 0 auto;
+// //         // max-width: 100vh;
+// //         // height: 80%;
+// //         // // background-color: rgb(60, 199, 0);
+// //         // width: 100%;
+
+// //         // .content {
+// //         //     // max-width: 100%;
+
+
+// //         //     // .mem-img {
+
+// //         //     //     display: flex;
+// //         //     //     // // width: 18.25em;
+// //         //     //     // width: 30vw;
+// //         //     //     // overflow: hidden;
+
+// //         //     //     // .img {
+// //         //     //     //     width: 30vw;
+// //         //     //     //     // height: 30vh;
+// //         //     //     //     border-radius: 1em;
+// //         //     // }
+
+// //         // }
+
+
+
+.content {
+    padding-top: 2%;
+}
+
+.text-and-conrtrol {
+
+    margin: 1rem auto;
+    max-width: 35%;
+    display: flex;
+    justify-content: space-between;
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .control {
+        display: flex;
+        gap: 1vh;
+
+        .control-circle {
+            min-width: 0.8rem;
+            height: 0.8rem;
+            background-color: rgb(255, 255, 255);
+            border-radius: 100em;
+            border: 0.1vmin solid;
+            border-color: black;
+
+        }
+    }
+}
+
+
+.mem-img {
+    // display: flex;
+    // justify-content: space-between;
+    border: 0.5vmin solid #000000;
+    max-width: 35%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .mem-slider {
+        display: flex;
+        background-color: rgba(63, 209, 0, 0.789);
+        transition: 2s;
+    }
+
+}
+
+#radio2:checked~.mem-slider {
+    margin-left: -105%;
+}
