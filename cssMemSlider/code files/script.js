@@ -32,15 +32,56 @@ const radioTwo = document.querySelector('#radio2')
 const radioThree = document.querySelector('#radio3')
 const radioFour = document.querySelector('#radio4')
 
-radioTwo.addEventListener('click', function () {
-    sliderLine.style.marginLeft = '-104%'
+const text = document.querySelector('p')
+
+function removeClass() {
+    if (text.classList.contains('active')) {
+        text.classList.remove('active');
+    }
+}
+
+radioOne.addEventListener('click', function () {
+    sliderLine.style.marginLeft = '0'
     sliderLine.style.transition = '1s'
+    text.classList.add('active');
+    text.innerText = 'не мем'
+    setTimeout(function () {
+        text.classList.remove('active');
+    }, 1000);
 });
 
 radioTwo.addEventListener('click', function () {
-    sliderLine.style.marginLeft = '-104%'
+    sliderLine.style.marginLeft = '-102%'
     sliderLine.style.transition = '1s'
+    text.classList.add('active');
+    text.innerText = 'мем любящий шрифты'
+    setTimeout(function () {
+        text.classList.remove('active');
+    }, 1000);
 });
+
+
+radioThree.addEventListener('click', function () {
+    sliderLine.style.marginLeft = '-204%'
+    sliderLine.style.transition = '1s'
+    text.classList.add('active');
+    text.innerText = 'грустный мем'
+    setTimeout(function () {
+        text.classList.remove('active');
+    }, 1000);
+});
+
+radioFour.addEventListener('click', function () {
+    sliderLine.style.marginLeft = '-306%'
+    sliderLine.style.transition = '1s'
+    text.classList.add('active');
+    text.innerText = 'самый лучший мем - мой Жорик'
+    setTimeout(function () {
+        text.classList.remove('active');
+    }, 1000);
+});
+
+
 
 
 

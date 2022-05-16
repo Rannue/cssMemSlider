@@ -9,97 +9,142 @@ body {
     // align-items: center;
     height: 100vh;
     margin: 0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    background-color: rgb(255, 255, 255);
 }
 
-
-// // .container-container {
-// //     display: inline-flex;
-// // }
-
-// // .container-container {
-// //     // width: 80em;
-// //     // height: 80em;
-// //     // background-color: rgb(132, 0, 255);
-// //     // display: flex;
-// //     // align-items: center;
-
-// //     .container {
-// //         // display: flex;
-// //         // margin: 0 auto;
-// //         // max-width: 100vh;
-// //         // height: 80%;
-// //         // // background-color: rgb(60, 199, 0);
-// //         // width: 100%;
-
-// //         // .content {
-// //         //     // max-width: 100%;
-
-
-// //         //     // .mem-img {
-
-// //         //     //     display: flex;
-// //         //     //     // // width: 18.25em;
-// //         //     //     // width: 30vw;
-// //         //     //     // overflow: hidden;
-
-// //         //     //     // .img {
-// //         //     //     //     width: 30vw;
-// //         //     //     //     // height: 30vh;
-// //         //     //     //     border-radius: 1em;
-// //         //     // }
-
-// //         // }
-
+input {
+    display: none;
+}
 
 
 .content {
     padding-top: 2%;
-}
 
-.text-and-conrtrol {
+    .mem-img {
+        // border: 0.6vmin dotted #080808;
+        border: 0.5vmin outset #080808;
+        max-width: 35%;
+        margin: 0 auto;
+        overflow: hidden;
 
-    margin: 1rem auto;
-    max-width: 35%;
-    display: flex;
-    justify-content: space-between;
+        .mem-slider {
+            display: flex;
+            transition: 2s;
+        }
 
-    .text {
-        font-size: 1rem;
     }
 
-    .control {
+    .text-and-conrtrol {
+        margin: 3vh auto;
+        max-width: 35%;
         display: flex;
-        gap: 1vh;
+        justify-content: space-between;
+        // gap: 3vh;
 
-        .control-circle {
-            min-width: 0.8rem;
-            height: 0.8rem;
-            background-color: rgb(255, 255, 255);
-            border-radius: 100em;
-            border: 0.1vmin solid;
-            border-color: black;
+        .text {
+            font-size: 0.8rem;
+            display: flex;
 
+            p.active {
+                opacity: 0;
+                animation: opasity-animation 2s forwards;
+            }
+
+            p.remove {
+                opacity: 1;
+                transition: 2s;
+            }
+
+        }
+
+        .control {
+            margin-left: 2rem;
+            display: flex;
+            gap: 1vh;
+
+            .control-circle {
+                cursor: pointer;
+                min-width: 0.6rem;
+                height: 0.6rem;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100em;
+                border: 0.3vmin solid;
+                border-color: #080808;
+            }
+
+            .control-circle:hover {
+                // background-color: rgb(151, 115, 187);
+                border-color: rgb(204, 129, 43);
+                transition: 0.2s;
+            }
+
+            .control-circle:active {
+                background-color: rgb(202, 115, 15);
+                border-color: rgb(202, 115, 15);
+                transition: 0.2s;
+            }
         }
     }
 }
 
+@media (min-width: 320px) and (max-width: 667.9px) {
 
-.mem-img {
-    // display: flex;
-    // justify-content: space-between;
-    border: 0.5vmin solid #000000;
-    max-width: 35%;
-    margin: 0 auto;
-    overflow: hidden;
+    .content {
+        padding-top: 2%;
 
-    .mem-slider {
-        display: flex;
-        background-color: rgba(63, 209, 0, 0.789);
-        transition: 2s;
+        .mem-img {
+            overflow: hidden;
+
+            .mem-slider {
+                display: flex;
+                background-color: rgba(63, 209, 0, 0.789);
+                transition: 2s;
+            }
+
+        }
+
+        .text-and-conrtrol {
+            margin: 1rem auto;
+            max-width: 35%;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            gap: 1rem;
+
+            .text {
+                font-size: 0.8rem;
+
+
+            }
+
+            .control {
+                // width: 0.5rem;
+                margin: 0 auto;
+                // margin-left: 0;
+                display: flex;
+                gap: 2vh;
+
+                .control-circle {
+                    cursor: pointer;
+                    min-width: 0.6rem;
+                    height: 0.6rem;
+                    border: 0.4vmin solid;
+                }
+
+            }
+        }
     }
 
 }
 
-#radio2:checked~.mem-slider {
-    margin-left: -105%;
+@keyframes opasity-animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

@@ -6,14 +6,36 @@
 body {
   height: 100vh;
   margin: 0 auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 300;
+  background-color: white;
+}
+
+input {
+  display: none;
 }
 
 .content {
   padding-top: 2%;
 }
 
-.text-and-conrtrol {
-  margin: 1rem auto;
+.content .mem-img {
+  border: 0.5vmin outset #080808;
+  max-width: 35%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.content .mem-img .mem-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.content .text-and-conrtrol {
+  margin: 3vh auto;
   max-width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,42 +45,119 @@ body {
           justify-content: space-between;
 }
 
-.text-and-conrtrol .text {
-  font-size: 1rem;
+.content .text-and-conrtrol .text {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.text-and-conrtrol .control {
+.content .text-and-conrtrol .text p.active {
+  opacity: 0;
+  -webkit-animation: opasity-animation 2s forwards;
+          animation: opasity-animation 2s forwards;
+}
+
+.content .text-and-conrtrol .text p.remove {
+  opacity: 1;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.content .text-and-conrtrol .control {
+  margin-left: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1vh;
 }
 
-.text-and-conrtrol .control .control-circle {
-  min-width: 0.8rem;
-  height: 0.8rem;
+.content .text-and-conrtrol .control .control-circle {
+  cursor: pointer;
+  min-width: 0.6rem;
+  height: 0.6rem;
   background-color: white;
   border-radius: 100em;
-  border: 0.1vmin solid;
-  border-color: black;
+  border: 0.3vmin solid;
+  border-color: #080808;
 }
 
-.mem-img {
-  border: 0.5vmin solid #000000;
-  max-width: 35%;
-  margin: 0 auto;
-  overflow: hidden;
+.content .text-and-conrtrol .control .control-circle:hover {
+  border-color: #cc812b;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-.mem-img .mem-slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: rgba(63, 209, 0, 0.789);
-  margin-left: 0;
+.content .text-and-conrtrol .control .control-circle:active {
+  background-color: #ca730f;
+  border-color: #ca730f;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-#radio2:checked ~ .mem-slider {
-  margin-left: -105%;
+@media (min-width: 320px) and (max-width: 667.9px) {
+  .content {
+    padding-top: 2%;
+  }
+  .content .mem-img {
+    overflow: hidden;
+  }
+  .content .mem-img .mem-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: rgba(63, 209, 0, 0.789);
+    -webkit-transition: 2s;
+    transition: 2s;
+  }
+  .content .text-and-conrtrol {
+    margin: 1rem auto;
+    max-width: 35%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 1rem;
+  }
+  .content .text-and-conrtrol .text {
+    font-size: 0.8rem;
+  }
+  .content .text-and-conrtrol .control {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2vh;
+  }
+  .content .text-and-conrtrol .control .control-circle {
+    cursor: pointer;
+    min-width: 0.6rem;
+    height: 0.6rem;
+    border: 0.4vmin solid;
+  }
+}
+
+@-webkit-keyframes opasity-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opasity-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
