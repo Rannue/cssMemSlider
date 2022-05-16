@@ -58,12 +58,6 @@ input {
           animation: opasity-animation 2s forwards;
 }
 
-.content .text-and-conrtrol .text p.remove {
-  opacity: 1;
-  -webkit-transition: 2s;
-  transition: 2s;
-}
-
 .content .text-and-conrtrol .control {
   margin-left: 2rem;
   display: -webkit-box;
@@ -89,6 +83,13 @@ input {
 }
 
 .content .text-and-conrtrol .control .control-circle:active {
+  background-color: #ca730f;
+  border-color: #ca730f;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.content .text-and-conrtrol .control .control-circle.active {
   background-color: #ca730f;
   border-color: #ca730f;
   -webkit-transition: 0.2s;
