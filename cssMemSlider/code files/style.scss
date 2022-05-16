@@ -57,7 +57,7 @@ input {
 
             .control-circle {
                 cursor: pointer;
-                min-width: 0.6rem;
+                width: 0.6rem;
                 height: 0.6rem;
                 background-color: rgb(255, 255, 255);
                 border-radius: 100em;
@@ -83,6 +83,11 @@ input {
             }
         }
     }
+}
+
+label {
+    cursor: pointer;
+    padding: 0.5vh;
 }
 
 @media (min-width: 320px) and (max-width: 667.9px) {

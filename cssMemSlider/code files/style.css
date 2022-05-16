@@ -68,7 +68,7 @@ input {
 
 .content .text-and-conrtrol .control .control-circle {
   cursor: pointer;
-  min-width: 0.6rem;
+  width: 0.6rem;
   height: 0.6rem;
   background-color: white;
   border-radius: 100em;
@@ -94,6 +94,11 @@ input {
   border-color: #ca730f;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+label {
+  cursor: pointer;
+  padding: 0.5vh;
 }
 
 @media (min-width: 320px) and (max-width: 667.9px) {

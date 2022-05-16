@@ -1,6 +1,5 @@
 const imgs = document.querySelectorAll('.img');
 const sliderLine = document.querySelector('.mem-slider');
-// let sliderWindow = document.querySelector('.mem-img');
 let count = 0;
 let width;
 
@@ -18,7 +17,6 @@ init();
 
 let inp = document.getElementsByName('radio-btn');
 
-
 function check() {
     let inp = document.getElementsByName('radio-btn');
     for (let i = 0; i < inp.length; i++) {
@@ -27,11 +25,6 @@ function check() {
     }
 }
 
-const radioOne = document.querySelector('#radio1')
-const radioTwo = document.querySelector('#radio2')
-const radioThree = document.querySelector('#radio3')
-const radioFour = document.querySelector('#radio4')
-
 const text = document.querySelector('p')
 
 const radioBtnOne = document.querySelector('#label-radio1')
@@ -39,18 +32,21 @@ const radioBtnTwo = document.querySelector('#label-radio2')
 const radioBtnThree = document.querySelector('#label-radio3')
 const radioBtnFour = document.querySelector('#label-radio4')
 
-function removeClass() {
-    if (text.classList.contains('active')) {
-        text.classList.remove('active');
-    }
-}
+const BTNactiveOne = document.querySelector('#div-radio1')
+const BTNactiveTwo = document.querySelector('#div-radio2')
+const BTNactiveThree = document.querySelector('#div-radio3')
+const BTNactiveFour = document.querySelector('#div-radio4')
 
-radioOne.addEventListener('click', function () {
-    radioBtnTwo.classList.remove('active');
-    radioBtnThree.classList.remove('active');
-    radioBtnFour.classList.remove('active');
+function initMaginLeft(i) {
+    sliderLine.style.marginLeft = '-' + (width / 16) * i + 'rem'
+};
 
-    sliderLine.style.marginLeft = '0'
+radioBtnOne.addEventListener('click', function () {
+    let i = 0
+    BTNactiveTwo.classList.remove('active');
+    BTNactiveThree.classList.remove('active');
+    BTNactiveFour.classList.remove('active');
+    initMaginLeft(i);
     sliderLine.style.transition = '1s'
     text.classList.add('active');
     text.innerText = 'не мем'
@@ -58,62 +54,69 @@ radioOne.addEventListener('click', function () {
         text.classList.remove('active');
     }, 1000);
 
-    radioBtnOne.classList.add('active');
+    BTNactiveOne.classList.add('active');
 });
 
-radioTwo.addEventListener('click', function () {
-    radioBtnOne.classList.remove('active');
-    radioBtnThree.classList.remove('active');
-    radioBtnFour.classList.remove('active');
-
-    sliderLine.style.marginLeft = '-102%'
+radioBtnTwo.addEventListener('click', function () {
+    i = 1
+    BTNactiveOne.classList.remove('active');
+    BTNactiveThree.classList.remove('active');
+    BTNactiveFour.classList.remove('active');
+    initMaginLeft(i);
     sliderLine.style.transition = '1s'
     text.classList.add('active');
-    text.innerText = 'мем любящий шрифты'
+    text.innerText = 'безопасный мем'
     setTimeout(function () {
         text.classList.remove('active');
     }, 1000);
-
-    radioBtnTwo.classList.add('active');
+    BTNactiveTwo.classList.add('active');
 
 });
 
-
-radioThree.addEventListener('click', function () {
-    radioBtnOne.classList.remove('active');
-    radioBtnTwo.classList.remove('active');
-    radioBtnFour.classList.remove('active');
-
-    sliderLine.style.marginLeft = '-204%'
+radioBtnThree.addEventListener('click', function () {
+    i = 2
+    BTNactiveOne.classList.remove('active');
+    BTNactiveTwo.classList.remove('active');
+    BTNactiveFour.classList.remove('active');
+    initMaginLeft(i);
     sliderLine.style.transition = '1s'
     text.classList.add('active');
     text.innerText = 'грустный мем'
     setTimeout(function () {
         text.classList.remove('active');
     }, 1000);
-
-    radioBtnThree.classList.add('active');
+    BTNactiveThree.classList.add('active');
 });
 
-radioFour.addEventListener('click', function () {
-    radioBtnOne.classList.remove('active');
-    radioBtnTwo.classList.remove('active');
-    radioBtnThree.classList.remove('active');
-
-    sliderLine.style.marginLeft = '-306%'
+radioBtnFour.addEventListener('click', function () {
+    i = 3
+    BTNactiveOne.classList.remove('active');
+    BTNactiveTwo.classList.remove('active');
+    BTNactiveThree.classList.remove('active');
+    initMaginLeft(i);
     sliderLine.style.transition = '1s'
     text.classList.add('active');
     text.innerText = 'самый лучший мем - мой Жорик'
     setTimeout(function () {
         text.classList.remove('active');
     }, 1000);
-
-    radioBtnFour.classList.add('active');
+    BTNactiveFour.classList.add('active');
 });
 
+window.addEventListener('resize', function () {
+    if (BTNactiveOne.classList.contains('active')) {
+        sliderLine.style.marginLeft = '0'
+    }
+    else if (BTNactiveTwo.classList.contains('active')) {
+        sliderLine.style.marginLeft = '-' + (width / 16) + 'rem'
+    }
+    else if (BTNactiveThree.classList.contains('active')) {
+        sliderLine.style.marginLeft = '-' + (width / 16) * 2 + 'rem'
+    }
+    else if (BTNactiveFour.classList.contains('active')) {
+        sliderLine.style.marginLeft = '-' + (width / 16) * 3 + 'rem'
+    }
 
-
-
-
+});
 
 
