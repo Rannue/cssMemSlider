@@ -17,11 +17,15 @@ input {
 
 
 .content {
-    padding-top: 2%;
+    padding-top: 3%;
+    margin-left: 1rem;
+    margin-right: 1rem;
 
     .mem-img {
         border: 0.5vmin outset #080808;
-        max-width: 35%;
+        box-sizing: content-box;
+        max-width: 70vh;
+        display: flex;
         margin: 0 auto;
         overflow: hidden;
 
@@ -34,17 +38,17 @@ input {
 
     .text-and-conrtrol {
         margin: 3vh auto;
-        max-width: 35%;
+        max-width: 70vh;
         display: flex;
         justify-content: space-between;
 
         .text {
-            font-size: 0.8rem;
+            font-size: 1rem;
             display: flex;
 
             p.active {
                 opacity: 0;
-                animation: opasity-animation 2s forwards;
+                animation: opasity-animation 3s forwards;
             }
 
 
@@ -90,10 +94,10 @@ label {
     padding: 0.5vh;
 }
 
-@media (min-width: 320px) and (max-width: 667.9px) {
+@media (min-width: 320px) and (max-width: 480.9px) {
 
     .content {
-        padding-top: 2%;
+        padding-top: 3%;
 
         .mem-img {
             overflow: hidden;
@@ -108,14 +112,14 @@ label {
 
         .text-and-conrtrol {
             margin: 1rem auto;
-            max-width: 35%;
+            max-width: 70vh;
             display: flex;
             flex-direction: column-reverse;
             justify-content: space-between;
             gap: 1rem;
 
             .text {
-                font-size: 0.8rem;
+                font-size: 1rem;
 
 
             }

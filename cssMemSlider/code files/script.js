@@ -52,7 +52,7 @@ radioBtnOne.addEventListener('click', function () {
     text.innerText = 'не мем'
     setTimeout(function () {
         text.classList.remove('active');
-    }, 1000);
+    }, 500);
 
     BTNactiveOne.classList.add('active');
 });
@@ -68,7 +68,7 @@ radioBtnTwo.addEventListener('click', function () {
     text.innerText = 'безопасный мем'
     setTimeout(function () {
         text.classList.remove('active');
-    }, 1000);
+    }, 500);
     BTNactiveTwo.classList.add('active');
 
 });
@@ -84,7 +84,7 @@ radioBtnThree.addEventListener('click', function () {
     text.innerText = 'грустный мем'
     setTimeout(function () {
         text.classList.remove('active');
-    }, 1000);
+    }, 500);
     BTNactiveThree.classList.add('active');
 });
 
@@ -99,7 +99,7 @@ radioBtnFour.addEventListener('click', function () {
     text.innerText = 'самый лучший мем - мой Жорик'
     setTimeout(function () {
         text.classList.remove('active');
-    }, 1000);
+    }, 500);
     BTNactiveFour.classList.add('active');
 });
 
