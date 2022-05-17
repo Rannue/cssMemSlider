@@ -1,0 +1,253 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  margin: 0 auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 200;
+  background-color: white;
+  font-size: 2rem;
+}
+
+input {
+  display: none;
+}
+
+.content {
+  padding-top: 3%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mem-img {
+  border: 0.5vmin outset #080808;
+  box-sizing: content-box;
+  max-width: 70vh;
+  height: auto;
+  display: flex;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+
+.mem-slider {
+  display: flex;
+  transition: 2s;
+  max-width: 100%;
+}
+
+.img {
+  min-width: 100%;
+
+}
+
+.text-and-conrtrol {
+  margin: 3vh auto;
+  max-width: 70vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.text-slider {
+  display: flex;
+  max-width: 100%;
+  transition: 2s;
+}
+
+.p1 {
+  width: 100vw;
+}
+
+p.active {
+  opacity: 0;
+  animation: opasity-animation 3s forwards;
+}
+
+.control {
+  margin-left: 2rem;
+  display: flex;
+  gap: 0.5vh;
+}
+
+.control-circle {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  background-color: white;
+  border-radius: 100em;
+  border: 0.3vmin solid;
+  border-color: #080808;
+}
+
+.control-circle:hover {
+  border-color: #cc812b;
+  transition: 0.2s;
+}
+
+.control-circle:active {
+  background-color: #ca730f;
+  border-color: #ca730f;
+  transition: 0.2s;
+}
+
+.control-circle.active {
+  background-color: #ca730f;
+  border-color: #ca730f;
+  transition: 0.2s;
+}
+
+label {
+  cursor: pointer;
+  padding: 1vh;
+}
+
+#label-radio1:hover #div-radio1 {
+  border-color: #ca730f;
+}
+
+#label-radio2:hover #div-radio2 {
+  border-color: #ca730f;
+}
+
+#label-radio3:hover #div-radio3 {
+  border-color: #ca730f;
+}
+
+#label-radio4:hover #div-radio4 {
+  border-color: #ca730f;
+}
+
+
+@media (min-width: 320px) and (max-width: 550.9px) {
+
+  .content {
+    padding-top: 3%;
+  }
+
+  .mem-img {
+    overflow: hidden;
+  }
+
+  .mem-slider {
+    display: flex;
+    transition: 2s;
+    margin-left: 0;
+  }
+
+  .text-and-conrtrol {
+    margin: 1rem auto;
+    max-width: 70vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+
+  .p1 {
+    width: 100vw;
+  }
+
+  .control {
+    margin: 0 auto;
+    display: flex;
+    gap: 0.5vh;
+  }
+
+  .control-circle {
+    cursor: pointer;
+    min-width: 1rem;
+    height: 1rem;
+    border: 0.4vmin solid;
+  }
+
+
+}
+
+@-webkit-keyframes opasity-animation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opasity-animation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#mem {
+  margin-left: 0%;
+}
+
+
+#radio1:checked~#bd #mem {
+  margin-left: 0%;
+}
+
+#radio2:checked~#bd #mem {
+  margin-left: -100%;
+}
+
+#radio3:checked~#bd #mem {
+  margin-left: -200%;
+}
+
+#radio4:checked~#bd #mem {
+  margin-left: -300%;
+}
+
+
+#radio1:checked~.text-and-conrtrol .text #text {
+  margin-left: 0%;
+}
+
+#radio2:checked~.text-and-conrtrol .text #text {
+  margin-left: -100vw;
+}
+
+#radio3:checked~.text-and-conrtrol .text #text {
+  margin-left: -200vw;
+}
+
+#radio4:checked~.text-and-conrtrol .text #text {
+  margin-left: -300vw;
+}
+
+
+#radio1:checked~.text-and-conrtrol .control #label-radio1 #div-radio1 {
+  background-color: #ca730f;
+  border-color: #ca730f;
+}
+
+#radio2:checked~.text-and-conrtrol .control #label-radio2 #div-radio2 {
+  background-color: #ca730f;
+  border-color: #ca730f;
+}
+
+#radio3:checked~.text-and-conrtrol .control #label-radio3 #div-radio3 {
+  background-color: #ca730f;
+  border-color: #ca730f;
+}
+
+#radio4:checked~.text-and-conrtrol .control #label-radio4 #div-radio4 {
+  background-color: #ca730f;
+  border-color: #ca730f;
+}
