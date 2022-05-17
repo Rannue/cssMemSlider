@@ -110,9 +110,22 @@ label {
   padding: 1vh;
 }
 
-#label-radio1:hover~.label-radio1 .control-circle {
+#label-radio1:hover #div-radio1 {
   border-color: #ca730f;
 }
+
+#label-radio2:hover #div-radio2 {
+  border-color: #ca730f;
+}
+
+#label-radio3:hover #div-radio3 {
+  border-color: #ca730f;
+}
+
+#label-radio4:hover #div-radio4 {
+  border-color: #ca730f;
+}
+
 
 @media (min-width: 320px) and (max-width: 550.9px) {
 
